@@ -1,0 +1,16 @@
+[Unit]
+Description=AD Biz Sys Backend (FastAPI)
+After=network.target postgresql.service redis-server.service samba-ad-dc.service
+Wants=postgresql.service redis-server.service samba-ad-dc.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/debian/AD/backend
+ExecStart=/home/debian/AD/backend/venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 2
+Restart=on-failure
+RestartSec=10
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

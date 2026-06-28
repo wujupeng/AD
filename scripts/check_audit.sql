@@ -1,0 +1,1 @@
+SELECT COUNT(*) AS total FROM audit_events;

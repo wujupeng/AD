@@ -1,0 +1,1 @@
+SELECT username, is_enabled, site_code FROM ad_users WHERE username = '2009';

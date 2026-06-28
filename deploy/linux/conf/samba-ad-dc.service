@@ -1,0 +1,15 @@
+[Unit]
+Description=Samba4 Active Directory Domain Controller
+After=network.target
+
+[Service]
+Type=notify
+NotifyAccess=all
+ExecStart=/usr/sbin/samba -D --no-process-group
+ExecReload=/bin/kill -HUP $MAINPID
+PIDFile=/run/samba/samba.pid
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,1 @@
+ALTER USER aduser WITH PASSWORD 'DBP@ss2026!';

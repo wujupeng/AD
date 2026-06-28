@@ -1,0 +1,1 @@
+SELECT dc_hostname, dc_site, dc_ip_address, is_gc, is_dns_integrated, health_status, os_version FROM dc_registries WHERE dc_ip_address='192.168.1.11';

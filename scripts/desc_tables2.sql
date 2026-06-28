@@ -1,0 +1,3 @@
+\d ldap_directory_configs
+\d integration_configs
+\d external_integration_configs

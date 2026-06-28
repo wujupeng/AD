@@ -1,0 +1,12 @@
+.codeartsdoer/
+node_modules/
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+dist/
+*.egg-info/
+.DS_Store
+*.log
+temp_*
